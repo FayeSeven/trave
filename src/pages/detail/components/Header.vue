@@ -48,6 +48,7 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   unmounted () {
+      //对全局事件解绑
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
