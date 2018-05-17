@@ -15,7 +15,7 @@
     import HomeRecommend from './components/Recommend'
     import HomeWeekend from './components/Weekend'
     import axios from 'axios'
-
+    import { mapState } from 'vuex'
     export default {
         name: "Home",
         components: {
@@ -33,6 +33,9 @@
                 recommendList: [],
                 weekendList: []
             }
+        },
+        computed: {
+            ...mapState(['city'])
         },
         mounted() {
             this.lastCity = this.city
